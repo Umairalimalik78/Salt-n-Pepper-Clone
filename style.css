@@ -110,10 +110,6 @@ body {
     transition: border-color 0.2s, color 0.2s, background 0.2s;
 }
 
-.secondaryBtn:hover {
-    border-color: #0066cc;
-    color: #0066cc;
-}
 
 .primaryBtn {
     padding: 12px 18px;
@@ -142,11 +138,6 @@ body {
     margin-left: 8px;
     color: #ed1c24;
     font-weight: 900;
-}
-
-.primaryBtn:hover {
-    background: #0052a3;
-    transform: translateY(-1px);
 }
 
 .brandName {
