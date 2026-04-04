@@ -4,36 +4,34 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
 }
 
-body a{
+@font-face {
+    font-family: 'futurak';
+    src: url(./Assets/futurak.ttf);
+}
+
+body a {
     text-decoration: none;
 }
 
 body {
-    background: #0f0f0f;
     font-family: 'DM Sans', sans-serif;
     color: #000000;
     min-height: 100vh;
 }
 
-main{
-    background-color: #0f0f0f;
-}
+
 .navWrapper {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
     background: #0f0f0f;
-    border-bottom: 1px solid #e0e0e0;
-    backdrop-filter: blur(12px);
 }
 
 .navContainer {
-    max-width: 1280px;
+    width: 100%;
+    max-width: 1140px;
     margin: 0 auto;
-    padding: 0 32px;
-    height: 68px;
+    height: 93px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -56,6 +54,7 @@ main{
 .navContent {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 16px;
 }
 
@@ -65,6 +64,7 @@ main{
     gap: 4px;
     list-style: none;
     justify-content: center;
+    margin-bottom: 0;
 }
 
 .navItem {
@@ -79,7 +79,7 @@ main{
     border-radius: 8px;
     text-decoration: none;
     color: #fff;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
     transition: color 0.2s, background 0.2s;
     white-space: nowrap;
@@ -96,7 +96,7 @@ main{
     gap: 12px;
 }
 
-.btnLogin {
+.secondaryBtn {
     padding: 12px 18px;
     height: 45px;
     border-radius: 24px;
@@ -110,12 +110,12 @@ main{
     transition: border-color 0.2s, color 0.2s, background 0.2s;
 }
 
-.btnLogin:hover {
+.secondaryBtn:hover {
     border-color: #0066cc;
     color: #0066cc;
 }
 
-.btnSignup {
+.primaryBtn {
     padding: 12px 18px;
     height: 50px;
     border-radius: 24px;
@@ -131,7 +131,7 @@ main{
     align-items: center;
 }
 
-.btnSignup span {
+.primaryBtn span {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -140,13 +140,19 @@ main{
     width: 30px;
     height: 30px;
     margin-left: 8px;
-    color: #000;
-    font-weight: bold;
+    color: #ed1c24;
+    font-weight: 900;
 }
 
-.btnSignup:hover {
+.primaryBtn:hover {
     background: #0052a3;
     transform: translateY(-1px);
+}
+
+.brandName {
+    color: inherit;
+    font-family: 'Futurak', sans-serif;
+    font-size: larger;
 }
 
 .brands {
@@ -156,17 +162,20 @@ main{
     gap: 20px;
     padding: 72px 0;
     justify-content: center;
-    background-color: #0f0f0f;
+    background-color: #000;
 }
 
-.brandHeading , .sectionHeading {
+.brandHeading,
+.sectionHeading {
     text-align: center;
+    background: none !important;
 }
 
-.brandHeading h2 {
-    font-size: 28px;
+.brandHeading h2,
+.sectionHeading h2 {
+    font-size: 40px;
     color: #fff;
-    font-weight: 600;
+    font-weight: 300;
 }
 
 .brandHeading p {
@@ -188,15 +197,16 @@ main{
     justify-content: center;
     flex-direction: column;
     gap: 24px;
+
 }
 
 .brandItem img {
-    width: 250px;
-    object-fit: contain;
+    object-fit: fill;
     padding: 20px;
     background-color: #fff;
     border-radius: 4px;
-    aspect-ratio: 3 / 2;
+    width: 240px;
+    height: 140px;
 }
 
 .brandItem button {
@@ -208,7 +218,7 @@ main{
     border-radius: 24px;
 }
 
-.franchiseSection{
+.franchiseSection {
     display: flex;
     align-items: center;
     gap: 40px;
@@ -217,44 +227,48 @@ main{
     background-color: #0f0f0f;
     flex-direction: column;
     color: #fff;
+    background-image: url(./Assets/franchiseSection_bg.webp);
+    background-repeat: no-repeat;
+    background-position: top 20px right 20px;
 }
 
 .franchiseContainer {
+    width: 100%;
+    max-width: 1140px;
     display: flex;
     align-items: center;
-    gap: 40px;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: column;
     flex-wrap: wrap;
     text-align: left;
+    background: none !important;
 }
 
-.franchiseItemContent{
+.franchiseItemContent {
     display: flex;
     gap: 12px;
     flex-direction: column;
-    max-width: 1140px;
 }
 
-.franchiseItem{
+.franchiseItem {
     display: flex;
     align-items: center;
     gap: 72px;
 }
 
-.franchiseItem img{
+.franchiseItem img {
     width: 546px;
     object-fit: contain;
     border-radius: 4px;
 }
 
-.franchiseContainer p.city {
+.franchiseItemContent p.city {
     text-align: left;
     font-size: 14px;
     color: #ed1c24;
 }
 
-.franchiseContainer button {
+.franchiseItemContent button {
     display: flex;
     gap: 12px;
     text-decoration: none;
@@ -263,17 +277,17 @@ main{
     color: #fff;
     background: none;
     border: 1px solid #fff;
-    padding: 12px ;
+    padding: 12px;
     border-radius: 24px;
 }
 
-.franchiseContainer button span {
+.franchiseItemContent button span {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.franchiseContainer{
+.franchiseContainer {
     display: flex;
     align-items: center;
     gap: 40px;
@@ -294,7 +308,7 @@ main{
     flex-direction: column;
 }
 
-.expressFranchiseSection .franchiseContainer{
+.expressFranchiseSection .franchiseContainer {
     max-width: 1140px;
     margin: 0 auto;
     display: grid;
@@ -305,35 +319,48 @@ main{
     color: #fff;
 }
 
-.sectionHeading{
+.sectionHeading {
     background-color: #0f0f0f;
     color: #fff;
 }
 
-.expressFranchiseSection .franchiseItem{
+.expressFranchiseSection .franchiseItem {
     flex-direction: column;
     text-align: center;
     gap: 12px;
 }
 
-.expressFranchiseSection .franchiseItem p{
-    margin: 0 auto;
-}
-.expressFranchiseSection .franchiseItem button{
+.expressFranchiseSection .franchiseItem p {
     margin: 0 auto;
 }
 
-.expressFranchiseSection .franchiseItem:last-child{
+.expressFranchiseSection .franchiseItem button {
+    margin: 0 auto;
+}
+
+.expressFranchiseSection .franchiseItem button span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    color: #ed1c24;
+    font-weight: 900;
+}
+
+.expressFranchiseSection .franchiseItem:last-child {
     grid-column: 1 / -1;
     justify-self: center;
 }
 
-.expressFranchiseSection .franchiseItem img{
+.expressFranchiseSection .franchiseItem img {
     width: 100%;
     max-width: 356px;
 }
 
-.villageFranchiseSection{
+.villageFranchiseSection {
     display: flex;
     align-items: center;
     gap: 40px;
@@ -343,19 +370,19 @@ main{
     flex-direction: column;
 }
 
-.villageFranchiseSection button{
+.villageFranchiseSection button {
     background-color: #28a745;
     border: 1px solid transparent;
     color: #fff;
     align-items: center;
 }
 
-.villageFranchiseSection button:hover{
+.villageFranchiseSection button:hover {
     background-color: transparent;
     border: 1px solid #28a745;
 }
 
-.villageFranchiseSection button span{
+.villageFranchiseSection button span {
     background-color: #fff;
     color: #0f0f0f;
     display: flex;
@@ -366,24 +393,30 @@ main{
     border-radius: 50%;
 }
 
-.newFranchiseSection{
+.newFranchiseSection {
     display: flex;
     align-items: center;
     gap: 40px;
     padding: 72px 0;
     justify-content: center;
-    background-color: #0f0f0f;
+    background-color: #000;
     flex-direction: column;
+    max-width: 1140px;
+    margin: 0 auto;
 }
 
-.newFranchiseCards{
+main{
+    background-color: #000;
+}
+
+.newFranchiseCards {
     display: grid;
     grid-template-columns: repeat(3, minmax(300px, 1fr));
     place-items: center;
     gap: 40px;
 }
 
-.newFranchiseCard{
+.newFranchiseCard {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -394,7 +427,192 @@ main{
     text-align: center;
 }
 
-.newFranchiseCard p{
+.newFranchiseCard h2{
+    font-size: 18px;
+}
+
+.newFranchiseCard p {
     font-size: 14px;
     color: #ed1c24;
+}
+
+footer{
+    background-color: #0f0f0f;
+    padding-top: 20px;
+}
+
+.footerWrapper {
+    background-color: #0f0f0f;
+    color: #cccccc;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.footerGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 40px;
+}
+
+.footerLogo{
+    width: 140px;
+}
+
+.footerLogo img {
+    width: 100%;
+}
+
+.descriptionText {
+    font-size: 13px;
+    line-height: 1.8;
+    color: #aaaaaa;
+    margin-bottom: 30px;
+}
+
+.bottomLinks {
+    display: flex;
+    gap: 20px;
+}
+
+.bottomLinks a {
+    color: #aaaaaa;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.bottomLinks a:hover {
+    color: white;
+}
+
+.colTitle {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.siteLinks {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.siteLinks li a {
+    color: #aaaaaa;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.siteLinks li a:hover {
+    color: white;
+}
+
+.contactSection {
+    margin-bottom: 16px;
+}
+
+.contactHeading {
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.contactText {
+    color: #aaaaaa;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.socialIcons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+.socialIcon {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: #cc0000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+}
+
+.socialIcon:hover {
+    background-color: #aa0000;
+}
+
+.appBadge {
+    width: 160px;
+    background-color: #1a1a1a;
+    border: 1px solid #333333;
+    border-radius: 6px;
+    padding: 10px 16px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.appBadge:hover {
+    background-color: #222222;
+}
+
+.badgeIcon {
+    font-size: 22px;
+}
+
+.badgeText {
+    display: flex;
+    flex-direction: column;
+}
+
+.badgeSmall {
+    font-size: 10px;
+    color: #aaaaaa;
+    font-family: Arial, sans-serif;
+}
+
+.badgeBig {
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.footerBottom {
+    background-color: #0a0a0a;
+    padding: 16px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #222222;
+}
+
+.footerBottom p {
+    color: #777777;
+    font-size: 13px;
+    font-family: Arial, sans-serif;
+}
+
+.footerBottom a {
+    color: #777777;
+    text-decoration: none;
+    font-size: 13px;
+    font-family: Arial, sans-serif;
+}
+
+.footerBottom a:hover {
+    color: white;
 }
