@@ -1,0 +1,320 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0f0f0f;
+    font-family: 'DM Sans', sans-serif;
+    color: #000000;
+    min-height: 100vh;
+}
+
+main{
+    background-color: #0f0f0f;
+}
+.navWrapper {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #0f0f0f;
+    border-bottom: 1px solid #e0e0e0;
+    backdrop-filter: blur(12px);
+}
+
+.navContainer {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 32px;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.navLogo {
+    width: 165px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.navLogo img {
+    width: 100%;
+}
+
+.navContent {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.navLinks {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    list-style: none;
+    justify-content: center;
+}
+
+.navItem {
+    position: relative;
+}
+
+.navLink {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s, background 0.2s;
+    white-space: nowrap;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-family: 'DM Sans', sans-serif;
+}
+
+
+.navActions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.btnLogin {
+    padding: 12px 18px;
+    height: 45px;
+    border-radius: 24px;
+    border: 1px solid #cccccc;
+    background: transparent;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'DM Sans', sans-serif;
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+
+.btnLogin:hover {
+    border-color: #0066cc;
+    color: #0066cc;
+}
+
+.btnSignup {
+    padding: 12px 18px;
+    height: 50px;
+    border-radius: 24px;
+    border: none;
+    background: #ed1c24;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'DM Sans', sans-serif;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+    display: flex;
+    align-items: center;
+}
+
+.btnSignup span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-left: 8px;
+    color: #000;
+    font-weight: bold;
+}
+
+.btnSignup:hover {
+    background: #0052a3;
+    transform: translateY(-1px);
+}
+
+.brands {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 72px 0;
+    justify-content: center;
+    background-color: #0f0f0f;
+}
+
+.brandHeading , .sectionHeading {
+    text-align: center;
+}
+
+.brandHeading h2 {
+    font-size: 28px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.brandHeading p {
+    font-size: 16px;
+    color: #b3b3b3;
+}
+
+.brandList {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.brandItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.brandItem img {
+    width: 250px;
+    object-fit: contain;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 4px;
+    aspect-ratio: 3 / 2;
+}
+
+.brandItem button {
+    font-size: 14px;
+    color: #fff;
+    background: none;
+    border: 1px solid #fff;
+    padding: 12px 48px;
+    border-radius: 24px;
+}
+
+.franchiseSection{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 72px 0;
+    justify-content: center;
+    background-color: #0f0f0f;
+    flex-direction: column;
+    color: #fff;
+}
+
+.franchiseContainer {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.franchiseItemContent{
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+    max-width: 1140px;
+}
+
+.franchiseItem{
+    display: flex;
+    align-items: center;
+    gap: 72px;
+}
+
+.franchiseItem img{
+    width: 546px;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.franchiseContainer p.city {
+    text-align: left;
+    font-size: 14px;
+    color: #ed1c24;
+}
+
+.franchiseContainer button {
+    display: flex;
+    gap: 12px;
+    text-decoration: none;
+    width: max-content;
+    font-size: 14px;
+    color: #fff;
+    background: none;
+    border: 1px solid #fff;
+    padding: 12px ;
+    border-radius: 24px;
+}
+
+.franchiseContainer button span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.franchiseContainer{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: #0f0f0f;
+    color: #fff;
+}
+
+.expressFranchiseSection .franchiseContainer{
+    max-width: 1140px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    place-items: center;
+    gap: 40px;
+    background-color: #0f0f0f;
+    color: #fff;
+}
+
+.sectionHeading{
+    background-color: #0f0f0f;
+    color: #fff;
+}
+
+.expressFranchiseSection .franchiseItem{
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+}
+
+.expressFranchiseSection .franchiseItem p{
+    margin: 0 auto;
+}
+.expressFranchiseSection .franchiseItem button{
+    margin: 0 auto;
+}
+
+.expressFranchiseSection .franchiseItem:last-child{
+    grid-column: 1 / -1;
+    justify-self: center;
+}
+
+.expressFranchiseSection .franchiseItem img{
+    width: 100%;
+    max-width: 356px;
+}
