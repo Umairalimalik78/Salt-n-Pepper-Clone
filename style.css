@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+body a{
+    text-decoration: none;
+}
+
 body {
     background: #0f0f0f;
     font-family: 'DM Sans', sans-serif;
@@ -280,6 +284,16 @@ main{
     color: #fff;
 }
 
+.expressFranchiseSection {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 72px 0;
+    justify-content: center;
+    background-color: #0f0f0f;
+    flex-direction: column;
+}
+
 .expressFranchiseSection .franchiseContainer{
     max-width: 1140px;
     margin: 0 auto;
@@ -317,4 +331,70 @@ main{
 .expressFranchiseSection .franchiseItem img{
     width: 100%;
     max-width: 356px;
+}
+
+.villageFranchiseSection{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 72px 0;
+    justify-content: center;
+    background-color: #0f0f0f;
+    flex-direction: column;
+}
+
+.villageFranchiseSection button{
+    background-color: #28a745;
+    border: 1px solid transparent;
+    color: #fff;
+    align-items: center;
+}
+
+.villageFranchiseSection button:hover{
+    background-color: transparent;
+    border: 1px solid #28a745;
+}
+
+.villageFranchiseSection button span{
+    background-color: #fff;
+    color: #0f0f0f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+.newFranchiseSection{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 72px 0;
+    justify-content: center;
+    background-color: #0f0f0f;
+    flex-direction: column;
+}
+
+.newFranchiseCards{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    place-items: center;
+    gap: 40px;
+}
+
+.newFranchiseCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    color: #000;
+    text-align: center;
+}
+
+.newFranchiseCard p{
+    font-size: 14px;
+    color: #ed1c24;
 }
