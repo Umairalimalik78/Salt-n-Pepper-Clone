@@ -140,6 +140,10 @@ body {
     font-weight: 900;
 }
 
+body i{
+    text-shadow: 0 0 3px currentColor;
+}
+
 .brandName {
     color: inherit;
     font-family: 'Futurak', sans-serif;
@@ -255,8 +259,9 @@ body {
 
 .franchiseItemContent p.city {
     text-align: left;
-    font-size: 14px;
+    font-size: 12px;
     color: #ed1c24;
+    letter-spacing: 6px;
 }
 
 .franchiseItemContent button {
@@ -295,8 +300,12 @@ body {
     gap: 40px;
     padding: 72px 0;
     justify-content: center;
-    background-color: #0f0f0f;
+    background-color: #000;
     flex-direction: column;
+    background-image: url(./Assets/expressFranchiseBg.webp);
+    background-repeat: no-repeat;
+    background-position: 50px center;
+    background-size: contain;
 }
 
 .expressFranchiseSection .franchiseContainer {
@@ -402,9 +411,10 @@ main {
 
 .newFranchiseCards {
     display: grid;
-    grid-template-columns: repeat(3, minmax(300px, 1fr));
-    place-items: center;
+    grid-template-columns: repeat(3, 1fr);
     gap: 40px;
+    width: 100%;
+    row-gap: 50px;
 }
 
 .newFranchiseCard {
@@ -416,6 +426,7 @@ main {
     border-radius: 8px;
     color: #000;
     text-align: center;
+    height: 230px;
 }
 
 .newFranchiseCard h2 {
@@ -429,7 +440,10 @@ main {
 
 footer {
     background-color: #0f0f0f;
-    padding-top: 20px;
+    padding-top: 70px;
+    background-image: url(./Assets/footerBg.webp);
+    background-repeat: no-repeat;
+    background-position: bottom 20px left 20px;
 }
 
 .footerWrapper {
@@ -437,11 +451,12 @@ footer {
     color: #cccccc;
     max-width: 1140px;
     margin: 0 auto;
+    background-color: transparent !important;
 }
 
 .footerGrid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
     gap: 40px;
 }
 
@@ -454,7 +469,7 @@ footer {
 }
 
 .descriptionText {
-    font-size: 13px;
+    font-size: 15px;
     line-height: 1.8;
     color: #aaaaaa;
     margin-bottom: 30px;
@@ -481,13 +496,15 @@ footer {
     font-weight: bold;
     margin-bottom: 20px;
     letter-spacing: 1px;
+    font-family: serif;
 }
 
 .siteLinks {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 15px;
+    padding-left: 0;
 }
 
 .siteLinks li a {
@@ -506,14 +523,14 @@ footer {
 
 .contactHeading {
     color: white;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: bold;
     margin-bottom: 6px;
 }
 
 .contactText {
     color: #aaaaaa;
-    font-size: 13px;
+    font-size: 15px;
     line-height: 1.8;
 }
 
@@ -542,66 +559,38 @@ footer {
     background-color: #aa0000;
 }
 
-.appBadge {
-    width: 160px;
-    background-color: #1a1a1a;
-    border: 1px solid #333333;
-    border-radius: 6px;
-    padding: 10px 16px;
-    margin-bottom: 10px;
-    text-decoration: none;
-    color: white;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.appBadge:hover {
-    background-color: #222222;
-}
-
-.badgeIcon {
-    font-size: 22px;
-}
-
-.badgeText {
-    display: flex;
-    flex-direction: column;
-}
-
-.badgeSmall {
-    font-size: 10px;
-    color: #aaaaaa;
-    font-family: Arial, sans-serif;
-}
-
-.badgeBig {
-    font-size: 14px;
-    font-weight: bold;
-    font-family: Arial, sans-serif;
-    color: white;
+.playStoreIcon{
+    margin-top: 12px;
 }
 
 .footerBottom {
-    background-color: #0a0a0a;
-    padding: 16px 60px;
+    background-color: #000;
+    padding: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 1px solid #222222;
 }
 
-.footerBottom p {
-    color: #777777;
-    font-size: 13px;
-    font-family: Arial, sans-serif;
+.footerBottomContent {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    font-weight: bold;
 }
 
-.footerBottom a {
-    color: #777777;
+.footerBottomContent a {
+    color: #aaaaaa;
     text-decoration: none;
-    font-size: 13px;
-    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.footerBottomContent p {
+    font-size: 14px;
+    margin-bottom: 0;
 }
 
 .footerBottom a:hover {
